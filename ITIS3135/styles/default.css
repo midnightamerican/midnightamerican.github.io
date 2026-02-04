@@ -14,7 +14,6 @@ body{
 header{
     margin-bottom: 10px; 
     background-color: var(--niner-gold);
-    height: 150px; 
     padding: 0.5rem 1rem; 
 }
 
@@ -26,22 +25,26 @@ h1{
     
 
 }
-p{
-    font-size: 1.5em
-}
 
 main {
     background: var(--niner-green);
     border-radius: 12px;
-    height: 150px;
     padding: 0.5rem 1rem; 
     margin: 10px; 
-    
-
-    
-
 }
 
 footer{
     text-align: center; 
 }
+
+nav a {
+    text-decoration: none;
+    color: var(--niner-green);
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
