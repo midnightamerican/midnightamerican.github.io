@@ -1,0 +1,59 @@
+/*
+Colors sourced from 
+https://teamcolorcodes.com/unc-charlotte-49ers-color-codes/
+
+colors:
+Green: #046A38
+Gold: #B9975B
+White: #FFFFFF
+
+*/
+
+:root {
+    --niner-green: #046A38;
+    --niner-gold: #B9975B;
+}
+
+body{
+    background-color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+
+}
+
+header{
+    background-color: var(--niner-gold);
+    height: 100px; 
+    text-align: center;
+    font-size: 20px; 
+    margin: auto; 
+    
+
+}
+
+header nav a{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+     font-size: 22px;  
+    
+   
+}
+
+main{
+    height: auto; 
+    margin: auto; 
+    font-family: sans-serif;
+
+}
+
+
+footer{
+    text-align: center; 
+    font-size: 20px;
+    text-decoration: none; 
+    color: var(--niner-gold)
+
+
+}
+
+/* create and style a top navigation bar */
+

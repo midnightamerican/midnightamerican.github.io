@@ -1,0 +1,47 @@
+:root{
+    --niner-green: #046A38;
+    --niner-gold: #B9975B;
+
+
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+header{
+    margin-bottom: 10px; 
+    background-color: var(--niner-gold);
+    height: 150px; 
+    padding: 0.5rem 1rem; 
+}
+
+
+h1{
+    margin-bottom: 10px; 
+    font-size: 2.0em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+p{
+    font-size: 1.5em
+}
+
+main {
+    background: var(--niner-green);
+    border-radius: 12px;
+    height: 150px;
+    padding: 0.5rem 1rem; 
+    margin: 10px; 
+    
+
+    
+
+}
+
+footer{
+    text-align: center; 
+}
