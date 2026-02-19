@@ -1,59 +1,78 @@
-/*
-Colors sourced from 
-https://teamcolorcodes.com/unc-charlotte-49ers-color-codes/
-
-colors:
-Green: #046A38
-Gold: #B9975B
-White: #FFFFFF
-
-*/
-
 :root {
-    --niner-green: #046A38;
-    --niner-gold: #B9975B;
+    --bg-page: #f2f2f2;
+    --bg-white: #ffffff;
+    --bg-light: #fafafa;
+    --bg-nav: #e6e6e6;
+    --bg-hover: #d9d9d9;
+
+    --text-main: #333;
+    --border-light: #ddd;
+    --border-medium: #ccc;
 }
 
-body{
-    background-color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif; 
 
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-header{
-    background-color: var(--niner-gold);
-    height: 100px; 
+
+header {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* TITLE */
+h1 {
+    margin: 0 0 0.5rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav {
+    background-color: var(--bg-nav);
+    border-bottom: 1px solid var(--border-medium);
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--bg-white);
+}
+
+
+main {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 20px;
+}
+
+main a {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #000;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--bg-nav);
+    color: var(--text-main);
     text-align: center;
-    font-size: 20px; 
-    margin: auto; 
-    
-
+    padding: 1rem;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-medium);
 }
-
-header nav a{
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-     font-size: 22px;  
-    
-   
-}
-
-main{
-    height: auto; 
-    margin: auto; 
-    font-family: sans-serif;
-
-}
-
-
-footer{
-    text-align: center; 
-    font-size: 20px;
-    text-decoration: none; 
-    color: var(--niner-gold)
-
-
-}
-
-/* create and style a top navigation bar */
-
