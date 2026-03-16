@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script>
+        function showSection(sectionId){
+
+            let sections = document.querySelectorAll("main section");
+
+            sections.forEach((section) => {
+                section.classList.remove("active");
+            });
+
+            document.getElementById(sectionId).classList.add("active");
+            }
+    </script>
+    <title>Flag Football</title>
+
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height:1.6;
+            background-color:#f4f6f9;
+            color: #333;
+            
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+
+        header{
+            background-color:#1f2937;
+            color:white;
+            padding:30px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        h1{
+            font-size:24px;
+        }
+        h3 {
+            margin: 15px 0 10px 0;
+            color: #1f2937;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:15px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+        }
+        nav li::after{
+            content:" | ";
+            color:#38bdf8;
+        }
+
+        nav li:last-child::after{
+            content:"";
+        }
+
+        main{
+            padding: 40px;
+            flex: 1;
+            background-color: lightgrey
+            
+        }
+
+    
+        section{
+            display:none;
+        }
+
+        .active{
+            display:block;
+        }
+
+        footer {
+            background-color: #1f2937; /* darker modern gray */
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #93c5fd; 
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        .small-note {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .hobby-container {
+        padding: 60px 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        }   
+
+        .hobby-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            padding: 20px;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+        }
+        .hobby-card img{
+            height: 300px;
+            width: 375px; 
+        }
+
+        .hobby-card p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            margin-top: 10px
+        
+        }
+
+        .btn {
+            margin-top: auto;
+            padding: 10px 15px;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .image-row{
+            display: flex;
+            gap: 15px;
+        }
+
+        .image-row figure{
+            flex: 1;
+        }
+
+        .image-row img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .button-card{
+            display: block;
+            background-color:#1f2937;
+            color:white;  
+            padding: 10px 15px; 
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: larger;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+    <h1>Flag Football</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('what')">What</a></li>
+                <li><a href="#" onclick="showSection('who')">Who</a></li>
+                <li><a href="#" onclick="showSection('when')">When</a></li>
+                <li><a href="#" onclick="showSection('where')">Where</a></li>
+                <li><a href="#" onclick="showSection('how')">How</a></li>
+                <li><a href="#" onclick="showSection('why')">Why</a></li>
+                <li><a href="#" onclick="showSection('ai')">AI</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+    <section id="what" class="active"> 
+        <h2>What</h2>
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/opening.jpeg" alt="flag football">
+                    <figcaption>Flag Football</figcaption>
+                </figure>
+                <h3>What is Flag Football?</h3>
+                <p>Flag football is a non-contact variation of American football in which players wear a belt or band around their waist with flags attached to each side. Instead of tackling an opposing player to the ground, defenders must remove one of the ball carrier's flags to end a play, making it a safer and more accessible alternative to traditional tackle football. The game retains all of the core elements that make football exciting — passing, rushing, receiving, and strategic play-calling — while eliminating the physical collisions that define the tackle version of the sport. Played on a smaller field with fewer players per side, typically five to eight depending on the league, flag football moves at a fast and dynamic pace that emphasizes speed, agility, and precision over brute strength. The sport is open to all ages and skill levels, from young children playing in recreational leagues to elite athletes competing in professional and international competitions. Its inclusive, low-barrier nature has made flag football one of the most popular and fastest-growing sports in the world, with millions of participants across all age groups, genders, and backgrounds enjoying the game in parks, schools, gyms, and stadiums globally.</p>
+            </article>    
+    </section>
+
+    <section id="who">
+        <h2>Who</h2>
+        <p>Anyone can play flag football including kids, adults, and recreational leagues.</p>
+        <div class="hobby-container">
+            <article class="hobby-card">
+                <h3>About Me</h3>
+                <figure>
+                    <img src="images/don.jpg" alt="Me at practice">
+                    <figcaption>Me at practice</figcaption>
+                </figure>
+                <p>I started playing flag football when I got to college. I joined the Flag Football Club team at UNC Charlotte. Over the last 3 years, I have played both club and Intramural flag football. I have coached both the Mens and youth football teams and have refed a youth league.</p>
+            </article>
+            <article class="hobby-card">
+                <h3>Youth Flag Football</h3>
+                <figure>
+                    <img src="images/youthflag.jpeg" alt="Youth Flag Football">
+                    <figcaption>A youth flag football team</figcaption>
+                </figure>
+                <p>Flag football has become one of the fastest-growing youth sports in the United States, offering kids a safe and exciting introduction to the game of football without the physical contact of tackle. Players wear flags attached to their waist, and instead of tackling, defenders must pull an opponent's flag to stop the play. The sport develops fundamental athletic skills like speed, agility, hand-eye coordination, and teamwork, while also teaching kids the strategy and rules of football in a fun, accessible environment. With organizations like NFL FLAG leading the charge, millions of children ages 5 to 17 now participate in leagues across the country, making it a beloved option for parents who want their kids to enjoy the thrill of football in a lower-risk setting</p>
+                
+            </article>
+            <article class="hobby-card">
+                <h3>College Flag Football</h3>
+                <figure>
+                    <img src="images/unccflag.jpeg" alt="Charlotte Flag Team"> 
+                    <figcaption>The Charlotte Mens Flag Team</figcaption>
+                </figure>
+                <p>College flag football is rapidly gaining momentum across campuses nationwide, evolving from a casual intramural activity into a more competitive and organized sport. Many universities now offer structured leagues and tournaments, giving students the chance to compete at a higher level while still enjoying the non-contact format of the game. The sport has seen a significant boost in visibility thanks to the NCAA, which officially recognized flag football as an emerging sport for women in 2021, paving the way for potential varsity programs and scholarships. Conferences and national championship events have further elevated the profile of college flag football, drawing larger crowds and media attention. With the inclusion of flag football in the 2028 Los Angeles Olympics on the horizon, the collegiate game is poised to become an even more prestigious pipeline for developing elite talent and expanding the sport's reach at the university level.</p>
+
+            </article>
+            <article class="hobby-card">
+                <h3>Professional Flag Football</h3>
+                <figure>
+                    <img src="images/proflag.webp" alt="pro-games flag">
+                    <figcaption>Flag Football at the Pro-Bowl</figcaption>
+                </figure>
+                <p>Professional flag football has exploded onto the sports scene in recent years, transforming from a recreational pastime into a legitimate spectator sport with serious athletes and major financial backing. The NFL FLAG Championships and the American Flag Football League (AFFL) have helped establish a competitive professional landscape, while the NFL itself has heavily invested in growing the game at the highest level. Star athletes, including many current and former NFL players, have embraced the professional flag football circuit, bringing star power and credibility to the sport. The formation of leagues like the Pro Flag Football League has created dedicated platforms for elite players to showcase their skills, compete for prize money, and build professional careers around the game. With flag football officially set to make its Olympic debut at the 2028 Los Angeles Games, the professional side of the sport is experiencing unprecedented growth in sponsorships, broadcasting deals, and global interest, signaling that professional flag football is no longer just a novelty but a serious and sustainable sporting enterprise.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="when">
+        <h2>When</h2>
+        <p>Flag football leagues are commonly played in fall and spring seasons.</p>
+        <article class="hobby-card">
+            <h3>Flag Football in all seasons</h3>
+            <div class="image-row">
+            <figure>
+                <img src="images/fall_flag.webp" alt="fall-flag football">
+                <figcaption>Playing Flag Football in the summer</figcaption>
+            </figure>
+            <figure>
+                <img src="images/winter.jpeg" alt="Winter-flag football">
+                <figcaption>Flag Football being played during the winter</figcaption>
+            </figure>
+            </div>
+            <p>The best time to play flag football largely depends on the climate, location, and personal preferences of the players involved, but generally speaking, the sport thrives in mild, comfortable weather conditions. Fall is widely considered the ideal season for flag football, as cooler temperatures make for energetic, enjoyable gameplay without the heat exhaustion risks that can come with summer activity. The crisp autumn air, combined with the natural connection to the traditional football season, creates an atmosphere that feels perfectly suited for the sport. Spring is another excellent time to hit the field, offering warming temperatures and longer daylight hours that allow for evening games and extended practice sessions. Many recreational and competitive leagues are structured around these two seasons for exactly these reasons. While flag football can certainly be played year-round, extreme summer heat can make midday games uncomfortable and potentially dangerous, so early morning or evening kickoffs are recommended if playing during the warmer months. In regions with mild winters, the sport can be enjoyed throughout the entire year, and some leagues even embrace cold-weather play for the added challenge and excitement it brings. Ultimately, the best time to play flag football is whenever players are motivated, the weather is manageable, and the field is available — because at its core, flag football is a sport meant to be fun and accessible no matter the season.</p>
+        </article>
+            
+    </section>
+
+    <section id="where">
+        <h2>Where to play flag football</h2>
+        <p>Games are played in parks, school fields, and recreation centers.</p>
+        <div class="button-card">
+                <a href="https://play.nflflag.com/" class="button-card">
+                    Find a league
+                </a>
+        </div>
+        <div class="hobby-container">
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/nflflag.jpeg" alt="nflflag">
+                </figure>
+                <h3>Finding the Perfect Place to Play</h3>
+                <p>Whether you're a seasoned veteran of the sport or a first-time player looking to get into the game, finding the right place to play flag football has never been easier. The sport's explosive growth in popularity means that fields, leagues, and facilities dedicated to flag football can be found in virtually every corner of the country. From local parks to professional-grade turf facilities, there are countless options available for players of all ages and skill levels.</p>
+            </article>
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/girlsflag.jpg" alt="girlsflag">
+                </figure>
+                <h3>Local Parks and Recreation Centers</h3>
+                <p>One of the most accessible and affordable places to play flag football is at your local park or community recreation center. Most public parks feature open grass fields that are perfectly suited for a casual pickup game or organized league play. Many city and county recreation departments offer structured flag football leagues for both youth and adults, providing a fun and organized environment for players to compete. These leagues are typically low-cost and beginner-friendly, making them a great starting point for those new to the sport.</p>
+            </article>
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/nfl-flag-football-pr-cropped.jpg" alt="youth flag">
+                </figure>
+                <h3>Schools and Universities</h3>
+                <p>Elementary schools, middle schools, high schools, and universities are excellent venues for flag football. Many physical education programs have incorporated flag football into their curriculums, giving students regular access to the sport during school hours. After-school programs and intramural leagues at the college level offer even more opportunities for students to play competitively in a structured setting. School fields and gymnasiums provide ready-made spaces for games and practices, often available for community use during evenings and weekends.</p>
+            </article>
+        </div>
+       
+    </section>
+
+    <section id="how">
+        <h2>How</h2>
+        <p>Instead of tackling, defenders stop the play by pulling a flag from the runner.</p>
+        <h3>The Basic Setup</h3>
+        <div class="hobby-container">
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/flagfield.jpg" alt="flag field">
+                    <figcaption>A Flag Football Field</figcaption>
+                </figure>
+                <h3>The Field</h3>
+                <p>Flag football is typically played on a rectangular field that is smaller than a standard NFL football field. Most flag football fields range from 50 to 80 yards in length and 25 to 35 yards in width, with end zones at each end where teams score touchdowns. The smaller field size keeps the action fast and ensures that every player stays involved in the game.</p>
+            </article>
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/bengalsflag.webp" alt="Cincinnati Bengals">
+                    <figcaption>Cincinnati Bengals Youth Flag Football Team</figcaption>
+                </figure>
+                <h3>The Teams</h3>
+                <p>Most flag football formats feature teams of five to eight players on the field at one time, depending on the league and age group. Teams are divided into an offensive unit and a defensive unit, with each side taking turns trying to score or prevent scoring.</p>
+            </article>
+            <article class="hobby-card">
+                <figure>
+                    <img src="images/flag-equipment.webp" alt="flag equipment">
+                    <figcaption>Flag Football Equipment</figcaption>
+                </figure>
+                <h3>The equipment</h3>
+                <p>Each player wears a flag belt around their waist with two flags attached — one on each hip. These flags are the central element that distinguishes flag football from tackle football. When a defender successfully pulls one of the ball carrier's flags, the play is considered dead and the action stops at that spot on the field.</p>
+            </article>
+        </div>
+        <h2>How to Play</h2>
+        
+        <h3>Starting the game</h3>
+        <p>Most flag football games begin with a coin toss to determine which team will start on offense and which will start on defense. Depending on the league, the game may start with a kickoff or simply with the offensive team taking possession of the ball at a designated spot on the field.</p>
+        
+        <h3>Downs and Possessions</h3>
+        <p>Like traditional football, flag football uses a system of downs to advance the ball. The offensive team has a set number of plays — typically four downs — to advance the ball past a midfield marker or into the end zone. If the offense successfully moves the ball past the first down marker, they are awarded a new set of downs. If they fail to do so within the allotted number of plays, possession of the ball is turned over to the opposing team.</p>
+        
+        <h3>Running plays</h3>
+        <p>On a running play, the quarterback hands the ball off to another player who attempts to advance the ball up the field by running past defenders. The play ends when a defender successfully pulls the ball carrier's flag, the ball carrier steps out of bounds, or the ball carrier reaches the end zone for a touchdown.</p>
+        
+        <h3>Passing plays</h3>
+        <p>Passing is one of the most exciting and widely used aspects of flag football. The quarterback drops back after the snap and attempts to throw the ball to an eligible receiver who has run a pass route downfield. Receivers must catch the ball in bounds and avoid having their flag pulled until they have advanced as far down the field as possible. Incomplete passes — those that hit the ground before being caught — result in no gain and the loss of a down.</p>
+        
+        <h3>Key Rules to Know</h3>
+        <ul>
+            <li>No Contact — Flag football is a non-contact sport. Blocking, tackling, shoving, and any form of physical contact are prohibited and will result in a penalty.</li>
+            <li>Flag Guarding — Ball carriers are not allowed to use their hands, arms, or the ball to protect their flags from being pulled. Flag guarding results in a penalty and loss of yards.</li>
+            <li>Offsides — Players on either team must not cross the line of scrimmage before the ball is snapped. Doing so results in an offsides penalty.</li>
+            <li>Pass Interference — Defenders cannot make contact with a receiver who is attempting to catch the ball. Pass interference results in a penalty and an automatic first down for the offense.</li>
+            <li>Illegal Flag Pull — Defenders may only pull the flag of a player who currently has possession of the ball. Pulling the flag of a player without the ball is an illegal flag pull and results in a penalty.</li>
+            <li>Touchdown Celebrations — While celebrating a touchdown is encouraged and part of the fun of the game, excessive or unsportsmanlike celebrations may result in a penalty depending on the league's rules.</li>
+        </ul>
+        <div class="button-card">
+                <a href="https://nflflag.com/coaches/football-drills" class="button-card">
+                    Learn More Here
+                </a>
+        </div>
+    </section>
+
+    <section id="why">
+        <h2>Why</h2>
+        <p>Flag football provides the fun of football with a lower risk of injury.</p>
+        <h3>Why You Should Play Flag Football</h3>
+        <ul>
+            <li>It is safe and accessible</li>
+            <li>Keeps you physically fit</li>
+            <li>It develops teamwork and communication skills</li>
+            <li>Fun for all ages</li>
+            <li>Supports youth development</li>
+        </ul>
+        <p>Flag football is more than just a sport — it is a community, a lifestyle, and an opportunity to experience the joy of athletic competition in one of the most accessible and rewarding formats available. Whether you are drawn to the physical fitness benefits, the social connections, the strategic challenge, or simply the pure fun of the game, flag football delivers on every front. There has never been a better time to get involved, and the only thing standing between you and your first flag football experience is the decision to play. So find a league, grab your flags, and get out on the field — you will not regret it.</p>
+        <div class="button-card">
+            <a href="https://playfootball.nfl.com/flag/benefits-of-flag-football/" class="button-card">
+                Read the Research
+            </a>
+        </div>
+    </section>
+
+    <section id="ai">
+        <h2>AI</h2>
+        <p>This webpage's text content was generated using AI.</p>
+        <h3>Prompts used</h3>
+        <p>The main prompts I used were to generate text content for the pages</p>
+        <p>Ex: "Generate a short paragraph on..."</p>
+        <div class="hobby-container">
+            <article class="hobby-card">
+                <h3>Youth Flag Football Content</h3>
+                <img src="images/youth_screenshot.png" alt="Youth description generation">
+            </article>
+            <article class="hobby-card">
+                <h3>College Flag Football Content</h3>
+                <img src="images/college_screenshot.png" alt="College description generation">
+            </article>
+            <article class="hobby-card">
+                <h3>Pro Flag Football Content</h3>
+                <img src="images/pro_screenshot.png" alt="Professional description generation">
+            </article>
+        </div>
+    </section>
+
+    </main>
+
+    <footer>
+        <p>
+        Designed by
+        <a href="../saintremydesigns.com/index.html">
+            Saint Remy Designs
+        </a>
+      </p>
+      <p class="small-note">Validation and accessibility tools:</p>
+      <div class="validation-links">
+        <a href="https://validator.w3.org/">HTML Validator</a>
+        <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a>
+        <a href="https://wave.webaim.org/">Accessibility Check</a>
+      </div>   
+    </footer>
+
+</body>
+</html>
+
