@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/introduction.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <div data-include="Components/header.html"></div>
+    <main>
+        <h2>Introduction Form</h2>
+
+    <h3>Please submit the form below.</h3>
+    <form id="form">
+        <label>First Name:
+            <input type="text" name="firstName" required value="YourName" placeholder="Enter first name">
+        </label>
+
+        <label>Middle Name:
+            <input type="text" name="middleName" placeholder="Optional">
+        </label>
+
+        <label>Nickname:
+            <input type="text" name="nickname" placeholder="Optional nickname">
+        </label>
+
+        <label>Last Name:
+            <input type="text" name="lastName" required value="YourLastName" placeholder="Enter last name">
+        </label>
+
+        <!-- ACKNOWLEDGEMENT -->
+        <label>
+            <input type="checkbox" name="ack" required> I understand this is my introduction
+        </label>
+
+        <label>Date:
+            <input type="date" name="date" required>
+        </label>
+
+        <!-- MASCOT -->
+        <label>Mascot Adjective:
+            <input type="text" name="adj" required placeholder="Brave, Smart, etc">
+        </label>
+
+        <label>Mascot Animal:
+            <input type="text" name="animal" required placeholder="Lion, Hawk, etc">
+        </label>
+
+        <label>Divider:
+            <input type="text" name="divider" value="|" placeholder="| ~ ♥️">
+        </label>
+
+      
+        <label>Picture:
+            <input type="file" name="image">
+        </label>
+
+        <label>Caption:
+            <input type="text" name="caption" placeholder="Picture caption">
+        </label>
+
+   
+        <label>Personal Statement:
+            <textarea name="personal" required placeholder="Tell us about yourself"></textarea>
+        </label>
+
+
+        <label>Personal Background:
+            <input type="text" name="background" required>
+        </label>
+
+        <label>Professional Background:
+            <input type="text" name="professional" required>
+        </label>
+
+        <label>Academic Background:
+            <input type="text" name="academic" required>
+        </label>
+
+        <label>Primary Computer:
+            <input type="text" name="computer" required>
+        </label>
+
+        <label>Courses:
+            <button type="button" id="addCourse">Add Course</button>
+        </label>
+
+        <label>Quote:
+            <input type="text" name="quote">
+        </label>
+
+        <label>Quote Author:
+            <input type="text" name="author">
+        </label>
+
+      
+        <label>Funny Thing:
+            <input type="text" name="funny">
+        </label>
+
+        <label>Anything Else:
+            <input type="text" name="extra">
+        </label>
+
+   
+        <label>LinkedIn:
+            <input type="url" name="linkedin" placeholder="https://">
+        </label>
+
+        <label>GitHub:
+            <input type="url" name="github" placeholder="https://">
+        </label>
+
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clearBtn">Clear</button>
+
+    </form>
+
+    <div id="result"></div>
+    </main>
+    
+</body>
+</html>
+
