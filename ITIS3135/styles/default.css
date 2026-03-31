@@ -1,78 +1,169 @@
+/* ================= ROOT COLORS (GREEN THEME) ================= */
 :root {
-    --bg-page: #f2f2f2;
-    --bg-white: #ffffff;
-    --bg-light: #fafafa;
-    --bg-nav: #e6e6e6;
-    --bg-hover: #d9d9d9;
+    --green-dark: #1b5e20;
+    --green-main: #2e7d32;
+    --green-light: #e8f5e9;
 
-    --text-main: #333;
-    --border-light: #ddd;
-    --border-medium: #ccc;
+    --white: #ffffff;
+    --off-white: #f9f9f9;
+
+    --text-dark: #1a1a1a;
+    --border-light: #c8e6c9;
+    --border-medium: #81c784;
 }
 
-
+/* ================= PAGE ================= */
 body {
-    background-color: var(--bg-page);
-    color: var(--text-main);
+    background-color: var(--green-light);
+    color: var(--text-dark);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
-
+/* ================= HEADER ================= */
 header {
-    background-color: var(--bg-white);
-    color: var(--text-main);
+    background-color: var(--green-dark);
+    color: var(--white);
     padding: 1rem;
-    border-bottom: 1px solid var(--border-light);
 }
 
 /* TITLE */
 h1 {
     margin: 0 0 0.5rem 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--white);
 }
 
+/* ================= NAV ================= */
 nav {
-    background-color: var(--bg-nav);
-    border-bottom: 1px solid var(--border-medium);
+    background-color: var(--green-main);
+    padding: 10px;
 }
 
 nav a {
-    color: var(--text-main);
+    color: var(--white);
     text-decoration: none;
     margin-right: 20px;
     font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
 nav a:hover {
-    background-color: var(--bg-white);
+    background-color: var(--green-dark);
 }
 
-
+/* ================= MAIN CONTAINER ================= */
 main {
-    background-color: var(--bg-white);
-    color: var(--text-main);
-    border: 1px solid var(--border-light);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+
+    background-color: var(--white);
+    border: 2px solid var(--border-medium);
     border-radius: 12px;
-    padding: 1.5rem;
-    margin: 20px;
 }
 
+/* ================= FORM ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* LABELS */
+form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 5px;
+}
+
+/* INPUTS */
+input,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid var(--border-medium);
+    border-radius: 6px;
+    background-color: var(--off-white);
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ================= BUTTONS ================= */
+button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+/* BUTTON COLORS */
+button[type="submit"] {
+    background-color: var(--green-main);
+    color: var(--white);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--green-dark);
+}
+
+button[type="reset"],
+button[type="button"] {
+    background-color: var(--white);
+    border: 2px solid var(--green-main);
+    color: var(--green-main);
+}
+
+button[type="reset"]:hover,
+button[type="button"]:hover {
+    background-color: var(--green-light);
+}
+
+/* BUTTON SPACING */
+form button {
+    margin-top: 10px;
+}
+
+/* ================= CHECKBOX ================= */
+input[type="checkbox"] {
+    width: auto;
+}
+
+/* FIX CHECKBOX LABEL */
+.checkbox-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+/* ================= LINKS ================= */
 main a {
-    color: var(--text-main);
+    color: var(--green-main);
     font-weight: bold;
 }
 
 main a:hover {
-    color: #000;
+    color: var(--green-dark);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
-    background-color: var(--bg-nav);
-    color: var(--text-main);
+    background-color: var(--green-main);
+    color: var(--white);
     text-align: center;
     padding: 1rem;
     margin-top: 20px;
-    border-top: 1px solid var(--border-medium);
 }
