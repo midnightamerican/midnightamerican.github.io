@@ -1,137 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction Form</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction Form | Michel Donovan Saint Remy</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/default.css" />
+  </head>
 
-</head>
-<body>
+  <body>
     <div data-include="Components/header.html"></div>
+
     <main>
-        <h2>Introduction Form</h2>
+      <h2>Introduction Form</h2>
+      <h3>Please submit the form below.</h3>
 
-    <h3>Please submit the form below.</h3>
-    <form id="form">
-        <label>First Name:
-            <input type="text" name="firstName" required value="YourName" placeholder="Enter first name">
+      <form id="form">
+
+        <!-- NAME -->
+        <label>First Name
+          <input type="text" value="Michel" required />
         </label>
 
-        <label>Middle Name:
-            <input type="text" name="middleName" placeholder="Optional">
+        <label>Middle Name
+          <input type="text" value="Donovan" />
         </label>
 
-        <label>Nickname:
-            <input type="text" name="nickname" placeholder="Optional nickname">
+        <label>Last Name
+          <input type="text" value="Saint Remy" required />
         </label>
 
-        <label>Last Name:
-            <input type="text" name="lastName" required value="YourLastName" placeholder="Enter last name">
+        <label>Mascot Adjective
+          <input type="text" value="Metaphysical" required />
         </label>
 
-        <!-- ACKNOWLEDGEMENT -->
-        <label>
-            <input type="checkbox" name="ack" required> I understand this is my introduction
+        <label>Mascot Animal
+          <input type="text" value="Dolphin" required />
         </label>
 
-        <label>Date:
-        <input type="text" name="date" required placeholder="MM/DD/YYYY"
-            pattern="\d{2}/\d{2}/\d{4}">
+        <label>Divider
+          <input type="text" value="|" required />
         </label>
 
-        <!-- MASCOT -->
-        <label>Mascot Adjective:
-            <input type="text" name="adj" required placeholder="Brave, Smart, etc">
+        <!-- ACKNOWLEDGMENT -->
+        <label>Acknowledgment
+          <textarea required>
+I understand that what I put here is publicly available on the web.
+          </textarea>
         </label>
 
-        <label>Mascot Animal:
-            <input type="text" name="animal" required placeholder="Lion, Hawk, etc">
+        <label>Date
+          <input type="text" value="4/15/2026" required />
         </label>
 
-        <label>Divider:
-            <input type="text" name="divider" value="|" placeholder="| ~ ♥️">
+        <!-- IMAGE -->
+        <label>Upload Image
+          <input type="file" accept="image/*" />
         </label>
 
-      
-        <label>Picture:
-            <input type="file" name="image">
+        <label>Image Caption
+          <input type="text" value="Me at my first NFL game" />
         </label>
 
-        <label>Caption:
-            <input type="text" name="caption" placeholder="Picture caption">
+        <!-- INTRO -->
+        <label>Personal Statement
+          <textarea required>
+I am a junior at UNC Charlotte studying Cybersecurity.
+          </textarea>
         </label>
 
-   
-        <label>Personal Statement:
-            <textarea name="personal" required placeholder="Tell us about yourself"></textarea>
+        <label>Background
+          <textarea required>
+I enjoy sports, friends, and traveling.
+          </textarea>
         </label>
 
-
-        <label>Personal Background:
-            <input type="text" name="background" required>
+        <label>Academic Background
+          <textarea required>
+Longleaf High School graduate, UNC Charlotte student.
+          </textarea>
         </label>
 
-        <label>Professional Background:
-            <input type="text" name="professional" required>
+        <label>Professional Background
+          <textarea required>
+Domino’s, Regal Movies, Charlotte Football, RA.
+          </textarea>
         </label>
 
-        <label>Academic Background:
-            <input type="text" name="academic" required>
+        <label>Goals
+          <textarea required>
+Cybersecurity career path.
+          </textarea>
         </label>
 
-        <label>Primary Computer:
-            <input type="text" name="computer" required>
+        <label>Subject Background
+          <textarea required>
+Small sports data projects and predictive models.
+          </textarea>
         </label>
 
-        <label>Courses:
-            <button type="button" id="addCourse">Add Course</button>
+        <label>Primary Computer
+          <textarea required>
+Custom PC (Ryzen 7 9700X, Intel Arc A750, 32GB RAM)
+          </textarea>
         </label>
 
-        <label>Quote:
-            <input type="text" name="quote">
+        <label>Backup Computer
+          <textarea required>
+Mac + Dell Inspiron 3880
+          </textarea>
         </label>
 
-        <label>Quote Author:
-            <input type="text" name="author">
+        <label>Fun Fact
+          <textarea>
+I play Charlotte Flag Football.
+          </textarea>
         </label>
 
-      
-        <label>Funny Thing:
-            <input type="text" name="funny">
+        <label>Share
+          <textarea>
+I love football.
+          </textarea>
         </label>
 
-        <label>Anything Else:
-            <input type="text" name="extra">
+        <!-- COURSES (MATCHES CSS #courses) -->
+        <section>
+          <h3>Courses</h3>
+
+          <div id="courses">
+
+            <div class="course-entry">
+              <input value="ITIS" required />
+              <input value="3135" required />
+              <input value="Web Development" required />
+              <input value="Required course" required />
+              <button type="button">Delete</button>
+            </div>
+
+            <div class="course-entry">
+              <input value="ITIS" />
+              <input value="3200" />
+              <input value="Privacy & Security" />
+              <input value="Major requirement" />
+              <button type="button">Delete</button>
+            </div>
+
+            <div class="course-entry">
+              <input value="ITSC" />
+              <input value="3155" />
+              <input value="Software Engineering" />
+              <input value="Major requirement" />
+              <button type="button">Delete</button>
+            </div>
+
+            <div class="course-entry">
+              <input value="POLS" />
+              <input value="3380" />
+              <input value="Security in Democracy" />
+              <input value="Minor requirement" />
+              <button type="button">Delete</button>
+            </div>
+
+            <div class="course-entry">
+              <input value="POLS" />
+              <input value="3382" />
+              <input value="Analytical Writing" />
+              <input value="Minor requirement" />
+              <button type="button">Delete</button>
+            </div>
+
+          </div>
+
+          <button type="button" id="addCourse">Add Course</button>
+        </section>
+
+        <!-- QUOTE -->
+        <label>Quote
+          <input type="text" value="“Listening, it's a skill”" />
         </label>
 
-   
-        <label>LinkedIn:
-            <input type="url" name="linkedin" placeholder="https://">
+        <label>Author
+          <input type="text" value="Ryan Osborn" />
         </label>
 
-        <label>GitHub:
-            <input type="url" name="github" placeholder="https://">
+        <!-- LINKS -->
+        <label>GitHub
+          <input type="url" value="midnightamerican.github.com" />
         </label>
 
-        
+        <label>LinkedIn
+          <input type="url" value="www.linkedin.com/in/michel-st-remy" placeholder="Enter linkedin url" required/>
+        </label>
+
+        <!-- RESULT -->
+        <div id="result"></div>
+
+        <!-- BUTTONS (MATCH CSS IDS) -->
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" id="clearBtn">Clear</button>
-        <button type="button" id="generateHTML">Generate HTML</button>
         <button type="button" id="generateJSON">Generate JSON</button>
+        <button type="button" id="generateHTML">Generate HTML</button>
 
-    </form>
-
-    <div id="result"></div>
+      </form>
     </main>
     <div data-include="Components/footer.html"></div>
-    <script src="scripts/include.min.js"></script>   
-    <script src="scripts/introduction.js" crossorigin="anonymous"></script>
-    <script src="scripts/generate_json.js" crossorigin="anonymous"></script>
-</body>
+    <script src="scripts/include.min.js"></script>
+  </body>
 </html>
-

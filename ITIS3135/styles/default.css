@@ -11,14 +11,18 @@
 }
 
 /* ================= GLOBAL ================= */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #e8f5e9; /* Fallback for var */
     background-color: var(--green-light);
     color: var(--text-dark);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
+/* ================= MAIN ================= */
 main {
     max-width: 900px;
     margin: 30px auto;
@@ -26,6 +30,7 @@ main {
     background-color: var(--white);
     border: 2px solid var(--border-medium);
     border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 /* ================= HEADER & NAV ================= */
@@ -54,6 +59,151 @@ nav a:hover {
     background-color: var(--green-dark);
 }
 
+/* ================= HEADINGS ================= */
+h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h3 {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ================= FORM ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Labels */
+form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--green-dark);
+}
+
+/* Inputs & Textareas */
+form input,
+form textarea {
+    margin-top: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+
+    background-color: var(--off-white);
+
+    transition: all 0.2s ease;
+}
+
+/* Focus */
+form input:focus,
+form textarea:focus {
+    border-color: var(--green-main);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+    background-color: var(--white);
+}
+
+/* Textarea */
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Checkbox */
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+form label input[type="checkbox"] {
+    margin-top: 0;
+}
+
+/* File input */
+form input[type="file"] {
+    padding: 6px;
+    background: var(--white);
+}
+
+/* ================= BUTTONS ================= */
+form button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Submit */
+form button[type="submit"] {
+    background-color: var(--green-main);
+    color: var(--white);
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--green-dark);
+}
+
+/* Reset + Clear */
+form button[type="reset"],
+#clearBtn {
+    background-color: #e0e0e0;
+}
+
+form button[type="reset"]:hover,
+#clearBtn:hover {
+    background-color: #c7c7c7;
+}
+
+/* Generate */
+#generateHTML,
+#generateJSON {
+    background-color: #66bb6a;
+    color: white;
+}
+
+#generateHTML:hover,
+#generateJSON:hover {
+    background-color: var(--green-main);
+}
+
+/* Add Course */
+#addCourse {
+    background-color: #ffa726;
+    color: white;
+    margin-top: 8px;
+}
+
+#addCourse:hover {
+    background-color: #fb8c00;
+}
+
+/* ================= COURSES ================= */
+#courses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ================= RESULT ================= */
+#result {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--green-light);
+    border: 1px solid var(--border-medium);
+    border-radius: 8px;
+    white-space: pre-wrap;
+}
+
 /* ================= FEATURES & PRICING ================= */
 .feature-grd, .pricing-grd {
     display: flex;
@@ -79,6 +229,7 @@ nav a:hover {
 .pricing-card:hover {
     transform: translateY(-5px);
 }
+
 /* ================= FOOTER ================= */
 footer {
     background-color: var(--green-main);
@@ -88,7 +239,7 @@ footer {
     margin-top: 20px;
 }
 
-
+/* ================= PLAYING CARDS ================= */
 #playing-cards {
     display: flex;
     justify-content: center;
@@ -97,7 +248,6 @@ footer {
     margin-top: 20px;
 }
 
-/* MAIN CARD */
 .playing-card {
     width: 140px;
     height: 200px;
@@ -118,15 +268,15 @@ footer {
     transform: translateY(-8px) scale(1.05);
 }
 
-/* ================= INVENTORY PAGE (LAB REQUIREMENTS) ================= */
-
-/* Attribute Selectors for Rows (Tests 21-26) */
+/* ================= INVENTORY PAGE ================= */
 tr[class="read"] {
     background-image: linear-gradient(to right, #e8f5e9, #ffffff);
 }
+
 tr[class="to-read"] {
     background-image: linear-gradient(to right, #ffebee, #ffffff);
 }
+
 tr[class="in-progress"] {
     background-image: linear-gradient(to right, #fff3e0, #ffffff);
 }
@@ -153,7 +303,7 @@ tr[class="in-progress"] span[class="status"] {
     background-image: linear-gradient(#ffb74d, #f57c00);
 }
 
-/* Rating System (Tests 41-53) */
+/* ================= RATING SYSTEM ================= */
 span[class^="rate"] > span {
     border-radius: 50%;
     margin: 2px;
@@ -163,18 +313,15 @@ span[class^="rate"] > span {
     display: inline-block;
 }
 
-/* Target "one" */
 span[class*="one"] span:first-child {
     background-image: linear-gradient(#ff7043, #f4511e);
 }
 
-/* Target "two" */
 span[class*="two"] span:nth-child(1),
 span[class*="two"] span:nth-child(2) {
     background-image: linear-gradient(#ffca28, #ffb300);
 }
 
-/* Target "three" */
 span[class*="three"] span {
     background-image: linear-gradient(#42a5f5, #1e88e5);
 }
@@ -195,15 +342,19 @@ span[class*="three"] span {
     padding: 20px;
 }
 
-/* Media Query */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 800px) {
+    main {
+        padding: 20px;
+    }
+
     #navbar {
         position: relative;
         width: 100%;
         height: auto;
     }
+
     #main-doc {
         margin-left: 0;
     }
 }
-
