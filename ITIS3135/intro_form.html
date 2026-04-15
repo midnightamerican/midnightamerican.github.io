@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction Form | Michel Donovan Saint Remy</title>
+
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/default.css" />
+
+    <link rel="stylesheet" href="styles/default.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
 
   <body>
@@ -19,154 +23,154 @@
 
         <!-- NAME -->
         <label>First Name
-          <input type="text" value="Michel" required />
+          <input name="firstName" type="text" value="Michel" required />
         </label>
 
         <label>Middle Name
-          <input type="text" value="Donovan" />
+          <input name="middleName" type="text" value="Donovan" />
         </label>
 
         <label>Last Name
-          <input type="text" value="Saint Remy" required />
+          <input name="lastName" type="text" value="Saint Remy" required />
         </label>
 
         <label>Mascot Adjective
-          <input type="text" value="Metaphysical" required />
+          <input name="mascotAdjective" type="text" value="Metaphysical" required />
         </label>
 
         <label>Mascot Animal
-          <input type="text" value="Dolphin" required />
+          <input name="mascotAnimal" type="text" value="Dolphin" required />
         </label>
 
         <label>Divider
-          <input type="text" value="|" required />
+          <input name="divider" type="text" value="|" required />
         </label>
 
         <!-- ACKNOWLEDGMENT -->
         <label>Acknowledgment
-          <textarea required>
+          <textarea name="acknowledgment" required>
 I understand that what I put here is publicly available on the web.
           </textarea>
         </label>
 
         <label>Date
-          <input type="text" value="4/15/2026" required />
+          <input name="ackDate" type="text" value="4/15/2026" required />
         </label>
 
         <!-- IMAGE -->
         <label>Upload Image
-          <input type="file" accept="image/*" />
+          <input name="image" type="file" accept="image/*" />
         </label>
 
         <label>Image Caption
-          <input type="text" value="Me at my first NFL game" />
+          <input name="imageCaption" type="text" value="Me at my first NFL game" />
         </label>
 
         <!-- INTRO -->
         <label>Personal Statement
-          <textarea required>
+          <textarea name="personalStatement" required>
 I am a junior at UNC Charlotte studying Cybersecurity.
           </textarea>
         </label>
 
         <label>Background
-          <textarea required>
+          <textarea name="personalBackground" required>
 I enjoy sports, friends, and traveling.
           </textarea>
         </label>
 
         <label>Academic Background
-          <textarea required>
+          <textarea name="academicBackground" required>
 Longleaf High School graduate, UNC Charlotte student.
           </textarea>
         </label>
 
         <label>Professional Background
-          <textarea required>
+          <textarea name="professionalBackground" required>
 Domino’s, Regal Movies, Charlotte Football, RA.
           </textarea>
         </label>
 
         <label>Goals
-          <textarea required>
+          <textarea name="careerGoals" required>
 Cybersecurity career path.
           </textarea>
         </label>
 
         <label>Subject Background
-          <textarea required>
+          <textarea name="subjectBackground" required>
 Small sports data projects and predictive models.
           </textarea>
         </label>
 
         <label>Primary Computer
-          <textarea required>
+          <textarea name="primaryComputer" required>
 Custom PC (Ryzen 7 9700X, Intel Arc A750, 32GB RAM)
           </textarea>
         </label>
 
         <label>Backup Computer
-          <textarea required>
+          <textarea name="backupComputer" required>
 Mac + Dell Inspiron 3880
           </textarea>
         </label>
 
         <label>Fun Fact
-          <textarea>
+          <textarea name="funnyThing">
 I play Charlotte Flag Football.
           </textarea>
         </label>
 
         <label>Share
-          <textarea>
+          <textarea name="share">
 I love football.
           </textarea>
         </label>
 
-        <!-- COURSES (MATCHES CSS #courses) -->
+        <!-- COURSES -->
         <section>
           <h3>Courses</h3>
 
           <div id="courses">
 
             <div class="course-entry">
-              <input value="ITIS" required />
-              <input value="3135" required />
-              <input value="Web Development" required />
-              <input value="Required course" required />
-              <button type="button">Delete</button>
+              <input name="courseDept" value="ITIS" required />
+              <input name="courseNum" value="3135" required />
+              <input name="courseName" value="Web Development" required />
+              <input name="courseReason" value="Required course" required />
+              <button type="button" class="delete-button">Delete</button>
             </div>
 
             <div class="course-entry">
-              <input value="ITIS" />
-              <input value="3200" />
-              <input value="Privacy & Security" />
-              <input value="Major requirement" />
-              <button type="button">Delete</button>
+              <input name="courseDept" value="ITIS" />
+              <input name="courseNum" value="3200" />
+              <input name="courseName" value="Privacy & Security" />
+              <input name="courseReason" value="Major requirement" />
+              <button type="button" class="delete-button">Delete</button>
             </div>
 
             <div class="course-entry">
-              <input value="ITSC" />
-              <input value="3155" />
-              <input value="Software Engineering" />
-              <input value="Major requirement" />
-              <button type="button">Delete</button>
+              <input name="courseDept" value="ITSC" />
+              <input name="courseNum" value="3155" />
+              <input name="courseName" value="Software Engineering" />
+              <input name="courseReason" value="Major requirement" />
+              <button type="button" class="delete-button">Delete</button>
             </div>
 
             <div class="course-entry">
-              <input value="POLS" />
-              <input value="3380" />
-              <input value="Security in Democracy" />
-              <input value="Minor requirement" />
-              <button type="button">Delete</button>
+              <input name="courseDept" value="POLS" />
+              <input name="courseNum" value="3380" />
+              <input name="courseName" value="Security in Democracy" />
+              <input name="courseReason" value="Minor requirement" />
+              <button type="button" class="delete-button">Delete</button>
             </div>
 
             <div class="course-entry">
-              <input value="POLS" />
-              <input value="3382" />
-              <input value="Analytical Writing" />
-              <input value="Minor requirement" />
-              <button type="button">Delete</button>
+              <input name="courseDept" value="POLS" />
+              <input name="courseNum" value="3382" />
+              <input name="courseName" value="Analytical Writing" />
+              <input name="courseReason" value="Minor requirement" />
+              <button type="button" class="delete-button">Delete</button>
             </div>
 
           </div>
@@ -176,26 +180,23 @@ I love football.
 
         <!-- QUOTE -->
         <label>Quote
-          <input type="text" value="“Listening, it's a skill”" />
+          <input name="quote" type="text" value="Listening, it's a skill" />
         </label>
 
         <label>Author
-          <input type="text" value="Ryan Osborn" />
+          <input name="quoteAuthor" type="text" value="Ryan Osborn" />
         </label>
 
         <!-- LINKS -->
         <label>GitHub
-          <input type="url" value="midnightamerican.github.com" />
+          <input name="github" type="url" value="https://www.midnightamerican.github.com" />
         </label>
 
         <label>LinkedIn
-          <input type="url" value="www.linkedin.com/in/michel-st-remy" placeholder="Enter linkedin url" required/>
+          <input name="linkedin" type="url" value="https://www.linkedin.com/in/michel-st-remy" required />
         </label>
 
-        <!-- RESULT -->
-        <div id="result"></div>
-
-        <!-- BUTTONS (MATCH CSS IDS) -->
+        
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" id="clearBtn">Clear</button>
@@ -203,8 +204,15 @@ I love football.
         <button type="button" id="generateHTML">Generate HTML</button>
 
       </form>
+    <div id="result"></div>
     </main>
+
     <div data-include="Components/footer.html"></div>
+
+    <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
     <script src="scripts/include.min.js"></script>
+
   </body>
 </html>

@@ -1,68 +1,76 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const form = document.getElementById("form");
     const result = document.getElementById("result");
     const title = document.querySelector("h2");
 
-    // Escape HTML for display
     function escapeHTML(str) {
-        return str
+        return String(str)
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;");
     }
 
-    // Generate JSON button
-    const generateJSONBtn = document.getElementById("generateJSON");
-    if (!generateJSONBtn) return;
+    document.getElementById("generateJSON").addEventListener("click", function () {
 
-    generateJSONBtn.addEventListener("click", function () {
-        // Collect courses
-        let courses = [];
-        const courseContainers = document.querySelectorAll(".courseContainer");
-        for (let i = 0; i < courseContainers.length; i++) {
-            const inputs = courseContainers[i].querySelectorAll("input");
+        const textareas = form.querySelectorAll("textarea");
+
+        // collect courses
+        const courses = [];
+        document.querySelectorAll(".course-entry").forEach(function (course) {
+            const inputs = course.querySelectorAll("input");
+
             courses.push({
                 dept: inputs[0].value,
                 number: inputs[1].value,
                 name: inputs[2].value,
                 reason: inputs[3].value
             });
-        }
+        });
 
-        // Build JSON object
         const data = {
-            firstName: form.firstName.value,
-            middleName: form.middleName.value,
-            nickname: form.nickname.value,
-            lastName: form.lastName.value,
-            date: form.date.value,
+            firstName: form.querySelector('[name="firstName"]').value,
+            middleName: form.querySelector('[name="middleName"]').value,
+            lastName: form.querySelector('[name="lastName"]').value,
+
             mascot: {
-                adj: form.adj.value,
-                animal: form.animal.value
+                adjective: form.querySelector('[name="mascotAdjective"]').value,
+                animal: form.querySelector('[name="mascotAnimal"]').value
             },
-            divider: form.divider.value,
-            personalStatement: form.personal.value,
-            personalBackground: form.background.value,
-            professionalBackground: form.professional.value,
-            academicBackground: form.academic.value,
-            primaryComputer: form.computer.value,
+
+            divider: form.querySelector('[name="divider"]').value,
+
+            personalStatement: textareas[1].value,
+            background: textareas[2].value,
+            academic: textareas[3].value,
+            professional: textareas[4].value,
+            goals: textareas[5].value,
+            subject: textareas[6].value,
+            primaryComputer: textareas[7].value,
+            backupComputer: textareas[8].value,
+            funFact: textareas[9].value,
+            share: textareas[10].value,
+
             courses: courses,
-            quote: form.quote.value,
-            author: form.author.value,
-            funnyThing: form.funny.value,
-            extra: form.extra.value,
-            linkedin: form.linkedin.value,
-            github: form.github.value
+
+            quote: form.querySelector('[name="quote"]').value,
+            author: form.querySelector('[name="quoteAuthor"]').value,
+            github: form.querySelector('[name="github"]').value,
+            linkedin: form.querySelector('[name="linkedin"]').value
         };
 
-        // Update H2
         title.textContent = "Introduction JSON";
 
-        // Display JSON nicely
-        result.innerHTML = "<pre><code class='language-json'>" + escapeHTML(JSON.stringify(data, null, 4)) + "</code></pre>";
+        result.innerHTML =
+            "<pre><code class='language-json'>" +
+            escapeHTML(JSON.stringify(data, null, 4)) +
+            "</code></pre>";
+
         form.style.display = "none";
 
-        // Highlight.js
-        if (window.hljs) hljs.highlightAll();
+        if (window.hljs) {
+            hljs.highlightAll();
+        }
     });
+
 });
