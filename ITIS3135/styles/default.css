@@ -3,38 +3,38 @@
     --green-dark: #1b5e20;
     --green-main: #2e7d32;
     --green-light: #e8f5e9;
-
     --white: #ffffff;
     --off-white: #f9f9f9;
-
     --text-dark: #1a1a1a;
     --border-light: #c8e6c9;
     --border-medium: #81c784;
 }
 
-/* ================= PAGE ================= */
+/* ================= GLOBAL ================= */
 body {
+    background-color: #e8f5e9; /* Fallback for var */
     background-color: var(--green-light);
     color: var(--text-dark);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
-/* ================= HEADER ================= */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: var(--white);
+    border: 2px solid var(--border-medium);
+    border-radius: 12px;
+}
+
+/* ================= HEADER & NAV ================= */
 header {
     background-color: var(--green-dark);
     color: var(--white);
     padding: 1rem;
 }
 
-/* TITLE */
-h1 {
-    margin: 0 0 0.5rem 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--white);
-}
-
-/* ================= NAV ================= */
 nav {
     background-color: var(--green-main);
     padding: 10px;
@@ -47,118 +47,38 @@ nav a {
     font-weight: bold;
     padding: 6px 10px;
     border-radius: 6px;
+    display: inline-block;
 }
 
 nav a:hover {
     background-color: var(--green-dark);
 }
 
-/* ================= MAIN CONTAINER ================= */
-main {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 50px 100px;
-
-    background-color: var(--white);
-    border: 2px solid var(--border-medium);
-    border-radius: 12px;
-}
-
-/* ================= FORM ================= */
-form {
+/* ================= FEATURES & PRICING ================= */
+.feature-grid, .pricing-grid {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-/* LABELS */
-form label {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    gap: 5px;
-}
-
-/* INPUTS */
-input,
-textarea {
-    padding: 10px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-
+.feature, .pricing-card {
+    background: var(--white);
+    border-radius: 10px;
     border: 1px solid var(--border-medium);
-    border-radius: 6px;
-    background-color: var(--off-white);
+    width: 180px;
+    text-align: center;
 }
 
-/* TEXTAREA */
-textarea {
-    min-height: 100px;
-    resize: vertical;
+.pricing-card {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* ================= BUTTONS ================= */
-button {
-    padding: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 6px;
-    border: none;
-    font-weight: bold;
+.pricing-card:hover {
+    transform: translateY(-5px);
 }
-
-/* BUTTON COLORS */
-button[type="submit"] {
-    background-color: var(--green-main);
-    color: var(--white);
-}
-
-button[type="submit"]:hover {
-    background-color: var(--green-dark);
-}
-
-button[type="reset"],
-button[type="button"] {
-    background-color: var(--white);
-    border: 2px solid var(--green-main);
-    color: var(--green-main);
-}
-
-button[type="reset"]:hover,
-button[type="button"]:hover {
-    background-color: var(--green-light);
-}
-
-/* BUTTON SPACING */
-form button {
-    margin-top: 10px;
-}
-
-/* ================= CHECKBOX ================= */
-input[type="checkbox"] {
-    width: auto;
-}
-
-/* FIX CHECKBOX LABEL */
-.checkbox-label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    font-weight: normal;
-}
-
-/* ================= LINKS ================= */
-main a {
-    color: var(--green-main);
-    font-weight: bold;
-}
-
-main a:hover {
-    color: var(--green-dark);
-}
-
 /* ================= FOOTER ================= */
 footer {
     background-color: var(--green-main);
@@ -167,3 +87,123 @@ footer {
     padding: 1rem;
     margin-top: 20px;
 }
+
+
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* MAIN CARD */
+.playing-card {
+    width: 140px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+    border-radius: 12px;
+    border: 2px solid var(--border-medium);
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.playing-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* ================= INVENTORY PAGE (LAB REQUIREMENTS) ================= */
+
+/* Attribute Selectors for Rows (Tests 21-26) */
+tr[class="read"] {
+    background-image: linear-gradient(to right, #e8f5e9, #ffffff);
+}
+tr[class="to-read"] {
+    background-image: linear-gradient(to right, #ffebee, #ffffff);
+}
+tr[class="in-progress"] {
+    background-image: linear-gradient(to right, #fff3e0, #ffffff);
+}
+
+.status {
+    height: 25px;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+}
+
+tr[class="to-read"] span[class="status"] {
+    border: 2px solid #d32f2f;
+    background-image: linear-gradient(#ef5350, #d32f2f);
+}
+
+tr[class="read"] span[class="status"] {
+    border: 2px solid #388e3c;
+    background-image: linear-gradient(#66bb6a, #388e3c);
+}
+
+tr[class="in-progress"] span[class="status"] {
+    border: 2px solid #f57c00;
+    background-image: linear-gradient(#ffb74d, #f57c00);
+}
+
+/* Rating System (Tests 41-53) */
+span[class^="rate"] > span {
+    border-radius: 50%;
+    margin: 2px;
+    height: 12px;
+    width: 12px;
+    background-color: #eee;
+    display: inline-block;
+}
+
+/* Target "one" */
+span[class*="one"] span:first-child {
+    background-image: linear-gradient(#ff7043, #f4511e);
+}
+
+/* Target "two" */
+span[class*="two"] span:nth-child(1),
+span[class*="two"] span:nth-child(2) {
+    background-image: linear-gradient(#ffca28, #ffb300);
+}
+
+/* Target "three" */
+span[class*="three"] span {
+    background-image: linear-gradient(#42a5f5, #1e88e5);
+}
+
+/* ================= DOCUMENTATION PAGE ================= */
+#navbar {
+    position: fixed;
+    width: 260px;
+    height: 100%;
+    border-right: 2px solid var(--border-medium);
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+#main-doc {
+    margin-left: 280px;
+    padding: 20px;
+}
+
+/* Media Query */
+@media (max-width: 800px) {
+    #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    #main-doc {
+        margin-left: 0;
+    }
+}
+

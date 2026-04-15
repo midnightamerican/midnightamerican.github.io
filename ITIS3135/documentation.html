@@ -3,19 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey</title>
+    <title>Documentation</title>
+
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div data-include="Components/header.html"></div>
-    <main>
-        <section>
-            <h2>Instructions Project</h2>
-            <p>This will contain my freeCodeCamp instructions</p>
+
+<div data-include="Components/header.html"></div>
+
+<main class="docs-page">
+
+    <!-- SIDE NAV -->
+    <nav class="docs-navbar">
+        <header>CSS Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Selectors_and_Visuals">Selectors and Visuals</a>
+        <a class="nav-link" href="#Box_Model">Box Model</a>
+        <a class="nav-link" href="#Flexbox_Layout">Flexbox Layout</a>
+        <a class="nav-link" href="#Media_Queries">Media Queries</a>
+    </nav>
+
+    <!-- MAIN DOC -->
+    <div class="docs-content" id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>CSS controls layout, colors, and fonts.</p>
+            <p>It separates design from content.</p>
+            <code>body { background-color: #f0f0f0; }</code>
         </section>
-    </main>
-    <div data-include="Components/footer.html"></div>
-    <script src="scripts/include.min.js"></script>
+
+        <section class="main-section" id="Selectors_and_Visuals">
+            <header>Selectors and Visuals</header>
+            <p>Selectors target elements for styling.</p>
+            <code>[class*="btn"] { border-radius: 4px; }</code>
+        </section>
+
+        <section class="main-section" id="Box_Model">
+            <header>Box Model</header>
+            <p>Includes margin, border, padding, and content.</p>
+            <code>div { padding: 20px; }</code>
+        </section>
+
+        <section class="main-section" id="Flexbox_Layout">
+            <header>Flexbox Layout</header>
+            <p>Used for responsive layouts.</p>
+            <code>display: flex;</code>
+        </section>
+
+        <section class="main-section" id="Media_Queries">
+            <header>Media Queries</header>
+            <p>Used for responsive design.</p>
+            <code>@media (max-width: 600px) { ... }</code>
+        </section>
+
+    </div>
+
+</main>
+
+<div data-include="Components/footer.html"></div>
+
+<script src="scripts/include.min.js"></script>
+
 </body>
 </html>
