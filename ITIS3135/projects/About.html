@@ -15,12 +15,44 @@
             <div class="card-grid">
                 <p>The Charlotte Sports Analytics Club creates a forum for students interested in the analytical aspect of sports. They meet and discuss analytical trends in sports, as well as provide statistical insight. Members of the Sports Analytics Club use what they learned regarding sports analytics with real sporting events, such as professional or NCAA games. Their final objective is to apply their skills and findings to Charlotte’s athletic programs.</p>
             </div>
+    
+            <div class="slideshow-container">
+                <img class="slide active" src="images/1500.jpg" alt="Slide 1">
+                <img class="slide" src="images/IMG_0263.jpeg" alt="Slide 2">
+                <img class="slide" src="images/IMG_0266.jpeg" alt="Slide 3">
+                <img class="slide" src="images/IMG_1679.jpeg" alt="Slide 4">
+                <img class="slide" src="images/IMG_3607.jpeg" alt="Slide 5">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
         </section>
+        <form id="contactForm" novalidate class="form-container">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+                <small class="error" id="messageError"></small>
+            </div>
+
+            <button type="submit">Submit</button>
+
+            </form>
         
 
     </main>
     <div data-include="Components/footer.html"></div>
     <script src="scripts/include.min.js"></script>
-    
+    <script src="scripts/slideshow.js"></script>
 </body>
 </html>
