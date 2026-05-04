@@ -41,10 +41,10 @@ header {
 /* ===== NAV ===== */
 nav {
   top: 0;
-  width: auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  align-items: center; /* FIXED */
   padding: 16px 48px;
   z-index: 1000;
   font-size: 20px;
@@ -123,6 +123,11 @@ nav a:hover::after {
   padding: 20px;
 }
 
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
 .hero-content p {
   font-size: 19.2px;
   opacity: 0.9;
@@ -160,12 +165,7 @@ nav a:hover::after {
   font-size: 32px;
 }
 
-/* ===== CARD GRID ===== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 32px;
-}
+
 
 .card {
   background: var(--secondary-white);
@@ -209,7 +209,6 @@ nav a:hover::after {
   display: block;
 }
 
-/* Scoped slideshow buttons ONLY */
 .slideshow-container button {
   position: absolute;
   top: 50%;
@@ -219,7 +218,6 @@ nav a:hover::after {
   border: none;
   padding: 10px;
   cursor: pointer;
-  width: auto;
 }
 
 #prev { left: 10px; }
@@ -258,7 +256,6 @@ textarea {
   resize: vertical;
 }
 
-/* Scoped form button ONLY */
 form button {
   width: 100%;
   padding: 10px;
