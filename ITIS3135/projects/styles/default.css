@@ -283,14 +283,20 @@ form button:hover {
 /* ===== FOOTER ===== */
 footer {
   background: var(--tertiary-gold);
-  color: black;
+  color: white;
   text-align: center;
   padding: 12px;
+}
+
+footer a{
+  color: white;
 }
 
 footer p {
   font-size: 14.4px;
 }
+
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
